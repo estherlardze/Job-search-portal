@@ -1,0 +1,531 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+   font-family: 'Poppins', sans-serif;
+}
+:root{
+    --color1: #072A40;
+    --color2: #18B7BE;
+    --color3:rgb(247, 241, 241);
+}
+body{
+
+    width: 100vw;
+    height: 100vh;
+}
+nav{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: white;
+    color: var(--color1);
+    position: relative;
+}
+.sign-in-up{
+    border: none;
+    background-color: transparent;
+}
+.sign-in-up:hover{
+    color: var(--color1);
+}
+.vertical{
+    border-left: 2px solid hsl(240, 4%, 73%) ;
+    height: 10px;
+    position: absolute;
+    right: 198px;
+    top: 25px;
+}
+.toggle-button{
+    height: 20px;
+    width: 25px;
+    position: absolute;
+    top: 1rem;
+    display: none;
+    flex-direction: column;
+    justify-content: space-between;
+    right: 1rem;
+}
+.toggle-button .bar{
+    width: 100%;
+    height: 3px;
+    background-color: black;
+    border-radius: 10px;
+}
+.links ul{
+    display: flex;
+    gap: 1.3rem;
+    list-style-type: none;
+    margin-top: 1rem;
+}
+.links ul li a{
+    text-decoration: none;
+    font-size: 1.2rem;
+    color: black;
+    text-transform: uppercase;
+    position: relative;
+}
+.links ul select {
+    border: none;
+}
+.links ul li a::before{
+ content: "";
+ height: 3px;
+ transition: all 300ms ease-in-out;
+ position: absolute;
+ background-color: rgb(37, 35, 35);
+}
+.spin::before{
+    width: 0%;
+    bottom: -2px;
+}
+.spin:hover:before{
+    width: 100%;
+    
+}
+nav h2 a{
+    text-decoration: none;
+    padding: .5rem 1rem;
+    color: var(--color1);
+
+}
+
+/*Home*/
+.home{
+    background-image: url("/assets/bg3.png");
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    width: 100%;
+    height: 80vh;
+    padding-top: 8rem;
+    padding-left: 5rem;
+    color: white;
+    text-align: center;
+}
+.home h1{
+    font-size: 3rem;
+}
+.home .btn, .sign .post, .category-location .btn{
+    background-color: #072A40;
+    color: white;
+    transition: background 300ms ease-in;
+}
+.category-location{
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: space-between;
+    background-color: var(--color2) ;
+    padding:1rem 2rem;
+    margin-bottom: 4rem;
+}
+.category-location select{
+    width: 23%;
+    padding: .5rem;
+    border-radius: .5rem;
+   
+}
+.category-location .btn{
+    padding: .6rem 2rem;
+}
+/*categories section*/
+.categories {
+    width: 100%;
+    margin-bottom: 4rem;
+}
+.explore{
+    display: flex;
+    flex-wrap: wrap; 
+    align-items: center;
+    gap: .5rem;
+    text-align: justify;
+}
+.categories article{
+    background-color: white;
+     width: 13rem;
+     height: 10rem;
+     border-radius: .5rem;
+     box-shadow: 2px 2px 2px rgb(9, 7, 7, .2);
+     padding-left: 20px;
+}
+.categories article p:nth-child(2){
+    font-weight: 600;
+}
+.categories article small{
+   color: var(--color2);
+   cursor: pointer; 
+}
+/*About us*/
+.about-us{
+    display: grid;
+    grid-template-columns: 60% 40%;
+    margin-bottom: 4rem;
+}
+.about-images img{
+    width: 20rem;
+}
+.about-content ul{
+    list-style-type: square;
+}
+.learn-more{
+    background-color: var(--color2);
+    padding: .7rem .8rem;
+    color: white;
+    width: 10rem;
+    margin: 1rem 0;
+    cursor: pointer;
+}
+.categories article i{
+    color: var(--color2);
+    font-size: 60px;
+}
+/*jobs*/
+.job-container{
+    margin-bottom: 4rem;
+}
+.jobs{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 90%;
+    margin: 0 5% 1rem;
+    box-shadow: 2px 2px 5px rgb(25, 14, 14,.3);
+    border-radius: .5rem;
+    padding: .5rem 1rem;
+}
+.jobs .name-description{
+    display: flex;
+}
+.job-description{
+    display: flex;
+}
+.company-name img{
+    width: 80px;
+    border: 1px solid transparent;
+     margin: .5rem 1rem;
+}
+.job-container article{
+    background-color:rgb(24, 183, 190, .2);
+    width: 100%;
+}
+.job-application .btn{
+    background-color: var(--color2);
+    padding: .5rem .7rem 0;
+    color: white;
+}
+.job-description i{
+    color: var(--color2);
+    font-size: 20px;
+}
+
+/*testimonial*/
+.client{
+    width: 17rem;
+    box-shadow: 2px 3px 5px rgb(7, 7, 7, .3);
+    padding: .5rem 1rem;
+    text-align: center;
+    cursor: pointer;
+    transition: all 300ms ease-in;
+    margin: 0 1rem;
+}
+.client:hover{
+    box-shadow: 10px 10px 20px rgb(7, 7, 7, .2);
+}
+.client button{
+    background-color:#14c2cb;
+    transition: all 300ms ease-in;
+}
+.client p{
+    font-size: .9rem;
+}
+.client img{
+ width: 120px;
+ height: 120px;
+ border-radius: 50%;
+ border: 4px solid rgb(60, 206, 225); 
+}
+.client small{
+    color: #14c2cb;
+    font-weight: 550;
+}
+/*SLIDER*/
+
+
+ /*Contact-us*/
+.contact-info{
+    display: grid;
+    grid-template-columns: repeat(3, 33%);
+    gap: 1rem;
+}
+.contact-info p{
+    background-color:rgb(24, 183, 190, .2);
+    padding: 10px;
+    text-align: center;
+}
+.contact-info i{
+    color: var(--color2);
+    font-size: 1.5rem;
+}
+.contact-us{
+    display: grid;
+    grid-template-columns: 1fr 1fr;  
+    gap: 1.5rem;
+}
+.contact-us img{
+    width: 35rem;
+    height: auto;
+}
+.name-mail{
+    max-width: 48%;
+    margin-bottom: 1rem;
+    padding: 10px;
+}
+.subject{
+    max-width: 96%;
+    margin-bottom: 1rem;
+    padding: 10px;
+}
+textarea{
+    margin-bottom: 1rem;
+    max-width:90vw;
+}
+.send-message{
+ margin-top: 1rem;
+ background-color:rgb(24, 183, 190, .2);
+ padding: 10px;
+ text-align: center;
+ width: 96%;
+ cursor: pointer;
+}
+
+
+/*Big tablets*/
+@media only screen and (max-width: 1024px){
+    nav{
+        width: 100%;
+        overflow: hidden; 
+        justify-content: left;   
+    }
+    .sign{
+        margin-left: 2rem;
+    }
+    .links ul li a{
+        font-size: .7rem;
+    }
+    body{
+        background-color: #14c2cb;
+    }
+    .home{
+        width: 100vw;
+    }
+    /*about us*/
+    .about-us{
+        grid-template-columns: 1fr;
+        margin-bottom: 4rem;
+        width: 100%;
+        margin: 0;
+    }
+    .about-images img{
+        width: 18rem;
+    }
+    .about-content > p, .about-content > h1{
+        max-width:70% ;
+    }
+    /**/
+
+    .job-container article{
+   
+        width: 80vw;
+    }
+
+    .contact-info{
+        display: flex;
+      flex-wrap: wrap;
+        gap: 1rem;
+    }
+    .contact-us{
+        display: grid;
+        grid-template-columns: 1fr;  
+    }
+    .contact input{
+        width: 50vw;
+    }
+    .shrink{
+        width: 70vw;
+        display: flex;
+        flex-wrap: wrap;
+    }
+    .name-mail, .subject{
+        max-width: 96%;    
+    }
+    .contact{
+       display: flex;
+       flex-direction: column;
+       align-items: center;
+       justify-content: center;
+    }
+    textarea{
+        max-width:50vw;
+        position: relative;
+        left: 5rem;
+    }
+}
+@media only screen and (max-width:600px) {
+    .toggle-button{
+        display: flex;
+    }
+    nav{
+        width: 100vw;
+        flex-direction: column;
+        align-items: flex-start;
+    }
+   
+    .links ul{
+        flex-direction: column;
+        width: 100%;
+    }
+    .links ul li a{
+        display: block;
+        text-align: center;
+    }
+    .links{
+        display: none;  
+        width: 100%; 
+    }
+    .sign button{
+        display: none;
+    }
+    .sign{
+        display: flex;
+       justify-content: center;
+       align-items: center;
+       width: 100%;   
+    }
+    .links.active, .sign button.active{
+        display: flex;  
+    }
+    .contact-us{
+        grid-template-columns: 1fr;
+    }
+    .home{
+        width: 100vw;
+        height: 100vh;
+        position: relative;
+    }
+    .home p{
+       font-size: .8rem;
+       height: 50vh;
+    }
+    .home .first-btn{
+      position: absolute;
+      bottom: 10rem;
+      left: 2rem;
+    }
+    .home .second-btn{
+        position: absolute;
+        bottom: 10rem;
+        right: 4rem;
+      }  
+    
+    .home h1{
+        font-size: 2rem;
+    }
+    .category-location{
+        flex-direction: column;    
+    }
+    .category-location select{
+        max-width: 90vw;
+    }
+    .category-location select{
+      width: 20rem;
+      margin-bottom: .5rem;
+    }
+    .explore{
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+    }
+    .explore article{
+        width: 9rem;
+        padding: 5px;
+    }
+    .explore article i{
+        font-size: 30px;
+    }
+    .about-us{
+        display: grid;
+        grid-template-columns: 1fr;
+        gap: .5rem;
+        margin-bottom: 4rem;
+    }
+    .about-content p,.about-content ul li, .contact-details p{
+        font-size: .8rem;
+    }
+    .about-content{
+        overflow-wrap: break-word;
+    }
+    .about-content h1{
+        font-size: 1.5rem;
+    }
+    .about-images img{
+        margin-bottom: 1.5rem;
+    }
+    .job-container article img{
+        display: none;
+    }
+    .job-container article h4{
+        font-size: .9rem;
+        text-align: center;
+    }
+    .job-container article{
+        display: flex;
+        flex-direction: column;
+        width: 96vw;
+        margin: 7% 3%;
+    }
+    .job-description p{
+        font-size: .8rem;
+    }
+    .job-description i{
+        font-size: 15px;
+    }
+    #about{
+        width: 96%;
+        margin-left: 2%;
+        margin-left: 2%;
+    }
+    .contact-us input{
+        width: 20rem;
+        margin-bottom: 1rem;
+        padding: 10px;
+    }
+    .subject{
+        width: 96%;
+        margin-bottom: 1rem;
+        padding: 10px;
+    }
+    .contact-us img, .send-message{
+        max-width: 90vw;
+    }
+    .contact-info{
+        grid-template-columns: 1fr;
+        width: 20rem;
+    }
+    .name-mail, .subject, textarea{
+        max-width: 90vw;    
+    }
+    .contact-info{
+        gap: .5rem;
+    }
+    .contact-info p{
+        width: 90vw;
+        margin: 1rem;
+    }
+    textarea{
+        position: relative;
+        left: .5rem;
+    }
+    footer{
+        margin: 0;
+    }
+}
