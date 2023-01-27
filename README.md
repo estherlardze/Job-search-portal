@@ -1,0 +1,1 @@
+This website has full responsiveness. A high-end job portal website template, Bootstrap Job Portal Website Design includes HTML, CSS, Bootstrap, and JavaScript. It is a free bootstrap job portal website template and a terrific method to showcase the current or upcoming job openings at your firm.
